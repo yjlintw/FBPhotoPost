@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E71BD95B15295C73002C5FB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71BD95A15295C73002C5FB9 /* UIKit.framework */; };
+		E71BD95D15295C73002C5FB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71BD95C15295C73002C5FB9 /* Foundation.framework */; };
+		E71BD95F15295C73002C5FB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71BD95E15295C73002C5FB9 /* CoreGraphics.framework */; };
+		E71BD96515295C73002C5FB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E71BD96315295C73002C5FB9 /* InfoPlist.strings */; };
+		E71BD96715295C73002C5FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD96615295C73002C5FB9 /* main.m */; };
+		E71BD96B15295C73002C5FB9 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD96A15295C73002C5FB9 /* BIDAppDelegate.m */; };
+		E71BD96E15295C73002C5FB9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71BD96C15295C73002C5FB9 /* MainStoryboard.storyboard */; };
+		E71BD97115295C73002C5FB9 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD97015295C73002C5FB9 /* BIDViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E71BD95615295C73002C5FB9 /* FBPhotoPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBPhotoPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71BD95A15295C73002C5FB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E71BD95C15295C73002C5FB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E71BD95E15295C73002C5FB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E71BD96215295C73002C5FB9 /* FBPhotoPost-Info.plist */ = {isa = PBXFileReference; path = "FBPhotoPost-Info.plist"; sourceTree = "<group>"; };
+		E71BD96415295C73002C5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E71BD96615295C73002C5FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E71BD96815295C73002C5FB9 /* FBPhotoPost-Prefix.pch */ = {isa = PBXFileReference; path = "FBPhotoPost-Prefix.pch"; sourceTree = "<group>"; };
+		E71BD96915295C73002C5FB9 /* BIDAppDelegate.h */ = {isa = PBXFileReference; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		E71BD96A15295C73002C5FB9 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		E71BD96D15295C73002C5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E71BD96F15295C73002C5FB9 /* BIDViewController.h */ = {isa = PBXFileReference; path = BIDViewController.h; sourceTree = "<group>"; };
+		E71BD97015295C73002C5FB9 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E71BD95315295C73002C5FB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71BD95B15295C73002C5FB9 /* UIKit.framework in Frameworks */,
+				E71BD95D15295C73002C5FB9 /* Foundation.framework in Frameworks */,
+				E71BD95F15295C73002C5FB9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E71BD94B15295C73002C5FB9 = {
+			isa = PBXGroup;
+			children = (
+				E71BD96015295C73002C5FB9 /* FBPhotoPost */,
+				E71BD95915295C73002C5FB9 /* Frameworks */,
+				E71BD95715295C73002C5FB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E71BD95715295C73002C5FB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E71BD95615295C73002C5FB9 /* FBPhotoPost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E71BD95915295C73002C5FB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E71BD95A15295C73002C5FB9 /* UIKit.framework */,
+				E71BD95C15295C73002C5FB9 /* Foundation.framework */,
+				E71BD95E15295C73002C5FB9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E71BD96015295C73002C5FB9 /* FBPhotoPost */ = {
+			isa = PBXGroup;
+			children = (
+				E71BD96915295C73002C5FB9 /* BIDAppDelegate.h */,
+				E71BD96A15295C73002C5FB9 /* BIDAppDelegate.m */,
+				E71BD96C15295C73002C5FB9 /* MainStoryboard.storyboard */,
+				E71BD96F15295C73002C5FB9 /* BIDViewController.h */,
+				E71BD97015295C73002C5FB9 /* BIDViewController.m */,
+				E71BD96115295C73002C5FB9 /* Supporting Files */,
+			);
+			path = FBPhotoPost;
+			sourceTree = "<group>";
+		};
+		E71BD96115295C73002C5FB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E71BD96215295C73002C5FB9 /* FBPhotoPost-Info.plist */,
+				E71BD96315295C73002C5FB9 /* InfoPlist.strings */,
+				E71BD96615295C73002C5FB9 /* main.m */,
+				E71BD96815295C73002C5FB9 /* FBPhotoPost-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E71BD95515295C73002C5FB9 /* FBPhotoPost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E71BD97415295C73002C5FB9 /* Build configuration list for PBXNativeTarget "FBPhotoPost" */;
+			buildPhases = (
+				E71BD95215295C73002C5FB9 /* Sources */,
+				E71BD95315295C73002C5FB9 /* Frameworks */,
+				E71BD95415295C73002C5FB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBPhotoPost;
+			productName = FBPhotoPost;
+			productReference = E71BD95615295C73002C5FB9 /* FBPhotoPost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E71BD94D15295C73002C5FB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = home;
+			};
+			buildConfigurationList = E71BD95015295C73002C5FB9 /* Build configuration list for PBXProject "FBPhotoPost" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E71BD94B15295C73002C5FB9;
+			productRefGroup = E71BD95715295C73002C5FB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E71BD95515295C73002C5FB9 /* FBPhotoPost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E71BD95415295C73002C5FB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71BD96515295C73002C5FB9 /* InfoPlist.strings in Resources */,
+				E71BD96E15295C73002C5FB9 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E71BD95215295C73002C5FB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71BD96715295C73002C5FB9 /* main.m in Sources */,
+				E71BD96B15295C73002C5FB9 /* BIDAppDelegate.m in Sources */,
+				E71BD97115295C73002C5FB9 /* BIDViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E71BD96315295C73002C5FB9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E71BD96415295C73002C5FB9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E71BD96C15295C73002C5FB9 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E71BD96D15295C73002C5FB9 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E71BD97215295C73002C5FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E71BD97315295C73002C5FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E71BD97515295C73002C5FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FBPhotoPost/FBPhotoPost-Prefix.pch";
+				INFOPLIST_FILE = "FBPhotoPost/FBPhotoPost-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E71BD97615295C73002C5FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FBPhotoPost/FBPhotoPost-Prefix.pch";
+				INFOPLIST_FILE = "FBPhotoPost/FBPhotoPost-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E71BD95015295C73002C5FB9 /* Build configuration list for PBXProject "FBPhotoPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E71BD97215295C73002C5FB9 /* Debug */,
+				E71BD97315295C73002C5FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E71BD97415295C73002C5FB9 /* Build configuration list for PBXNativeTarget "FBPhotoPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E71BD97515295C73002C5FB9 /* Debug */,
+				E71BD97615295C73002C5FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E71BD94D15295C73002C5FB9 /* Project object */;
+}
