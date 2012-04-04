@@ -6,10 +6,12 @@
 //  Copyright (c) 2012 home. All rights reserved.
 //
 
+#import "FBConnect.h"
 #import <UIKit/UIKit.h>
 
-@interface BIDAppDelegate : UIResponder <UIApplicationDelegate>
+@interface BIDAppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate>
+
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (retain, nonatomic) Facebook *facebook;
 @end

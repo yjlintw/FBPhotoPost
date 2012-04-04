@@ -11,13 +11,57 @@
 @implementation BIDAppDelegate
 
 @synthesize window = _window;
-
+@synthesize facebook;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    facebook = [[Facebook alloc] initWithAppId:@"331128026947952" andDelegate:self];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) 
+    {
+        facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:
+                            @"publish_stream",
+                            nil];
+    
+    if (![facebook isSessionValid]) 
+    {
+        [facebook authorize:permissions];
+    }
     return YES;
 }
-							
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation 
+{
+    return [facebook handleOpenURL:url]; 
+}
+
+- (void)fbDidLogin 
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    
+}
+
+- (void)fbDidLogout
+{
+    NSLog(@"in Logout");
+    //Remove saved authorization information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"])
+    {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpiractionDateKey"];
+        [defaults synchronize];
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

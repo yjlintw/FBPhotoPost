@@ -15,6 +15,10 @@
 		E71BD96B15295C73002C5FB9 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD96A15295C73002C5FB9 /* BIDAppDelegate.m */; };
 		E71BD96E15295C73002C5FB9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71BD96C15295C73002C5FB9 /* MainStoryboard.storyboard */; };
 		E71BD97115295C73002C5FB9 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD97015295C73002C5FB9 /* BIDViewController.m */; };
+		E71BD99D15296A12002C5FB9 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E71BD99015296A12002C5FB9 /* FBDialog.bundle */; };
+		E71BD99E15296A12002C5FB9 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E71BD99615296A12002C5FB9 /* libfacebook_ios_sdk.a */; };
+		E71BD9A115296E83002C5FB9 /* chineseChess.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E71BD9A015296E83002C5FB9 /* chineseChess.jpg */; };
+		E7A6B95A152A35840087395C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A6B959152A35840087395C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +26,33 @@
 		E71BD95A15295C73002C5FB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E71BD95C15295C73002C5FB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E71BD95E15295C73002C5FB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E71BD96215295C73002C5FB9 /* FBPhotoPost-Info.plist */ = {isa = PBXFileReference; path = "FBPhotoPost-Info.plist"; sourceTree = "<group>"; };
+		E71BD96215295C73002C5FB9 /* FBPhotoPost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBPhotoPost-Info.plist"; sourceTree = "<group>"; };
 		E71BD96415295C73002C5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E71BD96615295C73002C5FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E71BD96815295C73002C5FB9 /* FBPhotoPost-Prefix.pch */ = {isa = PBXFileReference; path = "FBPhotoPost-Prefix.pch"; sourceTree = "<group>"; };
-		E71BD96915295C73002C5FB9 /* BIDAppDelegate.h */ = {isa = PBXFileReference; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		E71BD96815295C73002C5FB9 /* FBPhotoPost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBPhotoPost-Prefix.pch"; sourceTree = "<group>"; };
+		E71BD96915295C73002C5FB9 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
 		E71BD96A15295C73002C5FB9 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
 		E71BD96D15295C73002C5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E71BD96F15295C73002C5FB9 /* BIDViewController.h */ = {isa = PBXFileReference; path = BIDViewController.h; sourceTree = "<group>"; };
+		E71BD96F15295C73002C5FB9 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
 		E71BD97015295C73002C5FB9 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+		E71BD98E15296A12002C5FB9 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		E71BD98F15296A12002C5FB9 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		E71BD99015296A12002C5FB9 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		E71BD99115296A12002C5FB9 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		E71BD99215296A12002C5FB9 /* FBFrictionlessRequestSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFrictionlessRequestSettings.h; sourceTree = "<group>"; };
+		E71BD99315296A12002C5FB9 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		E71BD99415296A12002C5FB9 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		E71BD99515296A12002C5FB9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		E71BD99615296A12002C5FB9 /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfacebook_ios_sdk.a; sourceTree = "<group>"; };
+		E71BD99715296A12002C5FB9 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		E71BD99815296A12002C5FB9 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		E71BD99915296A12002C5FB9 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		E71BD99A15296A12002C5FB9 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		E71BD99B15296A12002C5FB9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		E71BD99C15296A12002C5FB9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		E71BD9A015296E83002C5FB9 /* chineseChess.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chineseChess.jpg; sourceTree = "<group>"; };
+		E7A6B959152A35840087395C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E7A6B964152A46900087395C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A6B95A152A35840087395C /* CoreLocation.framework in Frameworks */,
 				E71BD95B15295C73002C5FB9 /* UIKit.framework in Frameworks */,
 				E71BD95D15295C73002C5FB9 /* Foundation.framework in Frameworks */,
 				E71BD95F15295C73002C5FB9 /* CoreGraphics.framework in Frameworks */,
+				E71BD99E15296A12002C5FB9 /* libfacebook_ios_sdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +74,10 @@
 		E71BD94B15295C73002C5FB9 = {
 			isa = PBXGroup;
 			children = (
+				E7A6B964152A46900087395C /* GLKit.framework */,
+				E7A6B959152A35840087395C /* CoreLocation.framework */,
+				E71BD99F15296E71002C5FB9 /* Pic */,
+				E71BD98D15296A12002C5FB9 /* facebook-ios-sdk */,
 				E71BD96015295C73002C5FB9 /* FBPhotoPost */,
 				E71BD95915295C73002C5FB9 /* Frameworks */,
 				E71BD95715295C73002C5FB9 /* Products */,
@@ -96,6 +124,36 @@
 				E71BD96815295C73002C5FB9 /* FBPhotoPost-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E71BD98D15296A12002C5FB9 /* facebook-ios-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				E71BD98E15296A12002C5FB9 /* Facebook.h */,
+				E71BD98F15296A12002C5FB9 /* FBConnect.h */,
+				E71BD99015296A12002C5FB9 /* FBDialog.bundle */,
+				E71BD99115296A12002C5FB9 /* FBDialog.h */,
+				E71BD99215296A12002C5FB9 /* FBFrictionlessRequestSettings.h */,
+				E71BD99315296A12002C5FB9 /* FBLoginDialog.h */,
+				E71BD99415296A12002C5FB9 /* FBRequest.h */,
+				E71BD99515296A12002C5FB9 /* JSON.h */,
+				E71BD99615296A12002C5FB9 /* libfacebook_ios_sdk.a */,
+				E71BD99715296A12002C5FB9 /* NSObject+SBJSON.h */,
+				E71BD99815296A12002C5FB9 /* NSString+SBJSON.h */,
+				E71BD99915296A12002C5FB9 /* SBJSON.h */,
+				E71BD99A15296A12002C5FB9 /* SBJsonBase.h */,
+				E71BD99B15296A12002C5FB9 /* SBJsonParser.h */,
+				E71BD99C15296A12002C5FB9 /* SBJsonWriter.h */,
+			);
+			path = "facebook-ios-sdk";
+			sourceTree = "<group>";
+		};
+		E71BD99F15296E71002C5FB9 /* Pic */ = {
+			isa = PBXGroup;
+			children = (
+				E71BD9A015296E83002C5FB9 /* chineseChess.jpg */,
+			);
+			name = Pic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +209,8 @@
 			files = (
 				E71BD96515295C73002C5FB9 /* InfoPlist.strings in Resources */,
 				E71BD96E15295C73002C5FB9 /* MainStoryboard.storyboard in Resources */,
+				E71BD99D15296A12002C5FB9 /* FBDialog.bundle in Resources */,
+				E71BD9A115296E83002C5FB9 /* chineseChess.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +300,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBPhotoPost/FBPhotoPost-Prefix.pch";
 				INFOPLIST_FILE = "FBPhotoPost/FBPhotoPost-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/facebook-ios-sdk\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,6 +315,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBPhotoPost/FBPhotoPost-Prefix.pch";
 				INFOPLIST_FILE = "FBPhotoPost/FBPhotoPost-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/facebook-ios-sdk\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +343,7 @@
 				E71BD97615295C73002C5FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
