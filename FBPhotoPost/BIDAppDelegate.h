@@ -11,7 +11,8 @@
 
 @interface BIDAppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate>
 
-
 @property (strong, nonatomic) UIWindow *window;
 @property (retain, nonatomic) Facebook *facebook;
+
+- (void)fbLogIn;
 @end

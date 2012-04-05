@@ -9,9 +9,9 @@
 #import "BIDAppDelegate.h"
 
 @implementation BIDAppDelegate
-
 @synthesize window = _window;
 @synthesize facebook;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -24,14 +24,7 @@
         facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
     }
     
-    NSArray *permissions = [[NSArray alloc] initWithObjects:
-                            @"publish_stream",
-                            nil];
-    
-    if (![facebook isSessionValid]) 
-    {
-        [facebook authorize:permissions];
-    }
+    [self fbLogIn];
     return YES;
 }
 
@@ -40,27 +33,6 @@
     return [facebook handleOpenURL:url]; 
 }
 
-- (void)fbDidLogin 
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
-    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
-    [defaults synchronize];
-    
-}
-
-- (void)fbDidLogout
-{
-    NSLog(@"in Logout");
-    //Remove saved authorization information if it exists
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"])
-    {
-        [defaults removeObjectForKey:@"FBAccessTokenKey"];
-        [defaults removeObjectForKey:@"FBExpiractionDateKey"];
-        [defaults synchronize];
-    }
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -100,5 +72,86 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+#pragma mark - Facebook Session
+/**
+ * Facebook Session
+*/
+- (void)fbLogIn
+{
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", nil];
+    
+    if (![facebook isSessionValid]) 
+    {
+        [facebook authorize:permissions];
+    }
+}
+
+- (void)fbDidLogin 
+{
+    NSLog(@"Login");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkLoginStatus" object:nil];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    
+}
+
+- (void)fbDidLogout
+{
+    NSLog(@"in Logout");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkLoginStatus" object:nil];
+    NSLog(@"%@",self.nextResponder);
+    //Remove saved authorization information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"])
+    {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpiractionDateKey"];
+        [defaults synchronize];
+    }
+}
+
+
+
+/**
+ * Called when the user dismissed the dialog without logging in.
+ */
+- (void)fbDidNotLogin:(BOOL)cancelled
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkLoginStatus" object:nil];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"])
+    {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpiractionDateKey"];
+        [defaults synchronize];
+    }
+}
+
+/**
+ * Called after the access token was extended. If your application has any
+ * references to the previous access token (for example, if your application
+ * stores the previous access token in persistent storage), your application
+ * should overwrite the old access token with the new one in this method.
+ * See extendAccessToken for more details.
+ */
+- (void)fbDidExtendToken:(NSString*)accessToken
+               expiresAt:(NSDate*)expiresAt
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkLoginStatus" object:nil];
+}
+/**
+ * Called when the current session has expired. This might happen when:
+ *  - the access token expired
+ *  - the app has been disabled
+ *  - the user revoked the app's permissions
+ *  - the user changed his or her password
+ */
+- (void)fbSessionInvalidated
+{
+}
+//============ End Facebook Session ===============//
 
 @end
